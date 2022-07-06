@@ -10,7 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 const Flash = () => {
     const [clickTour, setClickTour] = useState(true);
     const navigation = useNavigation();
-
+    //hello
 
     useEffect(() => {
 
