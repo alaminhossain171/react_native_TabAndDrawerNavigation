@@ -25,6 +25,7 @@ export default {
 
     //Learning
     LEARNING:'Learning',
+    LEARNINGALL:'LearningAll',
 
     //Live
     LIVE:'Live',
