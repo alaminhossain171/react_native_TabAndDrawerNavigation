@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // In App.js in a new project
 
 import * as React from 'react';

@@ -12,8 +12,8 @@ import Flash from '../Screens/Auth/Flash';
 const AuthStack = (Stack) => {
     return (
         <>
-            <Stack.Screen name={AuthNavigationString.FLASH} component={Flash} />
             <Stack.Screen name={AuthNavigationString.STARAUTH} component={CelebrityAuth} />
+            <Stack.Screen name={AuthNavigationString.FLASH} component={Flash} />
         </>
     )
 }
