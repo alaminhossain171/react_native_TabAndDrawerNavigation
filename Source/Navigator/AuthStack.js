@@ -1,11 +1,20 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import TabRoutes from './TabRoutes';
 
-const AuthStack = () => {
+
+import AuthNavigationString from '../Constants/AuthNavigationString';
+import CelebrityAuth from '../Screens/Auth/CelebrityAuth';
+import Flash from '../Screens/Auth/Flash';
+
+
+
+const AuthStack = (Stack) => {
     return (
-        <View>
-            <Text>AuthStack</Text>
-        </View>
+        <>
+            <Stack.Screen name={AuthNavigationString.FLASH} component={Flash} />
+            <Stack.Screen name={AuthNavigationString.STARAUTH} component={CelebrityAuth} />
+        </>
     )
 }
 
