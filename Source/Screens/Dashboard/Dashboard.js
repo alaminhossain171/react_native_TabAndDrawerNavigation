@@ -1,32 +1,25 @@
 /* eslint-disable prettier/prettier */
 
 import React from 'react';
-import {
-  Image,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {Image, ScrollView, Text, TouchableOpacity, View} from 'react-native';
 
-import styles from './styles'
+import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import imagePath from '../../Constants/imagePath';
-
-
+import {useNavigation} from '@react-navigation/native';
+import MainNavigationString from '../../Constants/MainNavigationString';
 
 function Dashboard() {
-
+  const Navigation = useNavigation();
 
   return (
     <ScrollView style={styles.container}>
       <View style={styles.ContainerCard}>
-
         <View style={styles.Main}>
           <View>
-            <TouchableOpacity style={styles.Card}
-
-            >
+            <TouchableOpacity
+              style={styles.Card}
+              onPress={() => Navigation.navigate(MainNavigationString.POST)}>
               <Image source={imagePath.Post} style={styles.postImage} />
               <Text style={styles.badge}>
                 <Text>2</Text>
@@ -49,10 +42,9 @@ function Dashboard() {
           </View>
 
           <View>
-            <TouchableOpacity style={styles.Card}
-            
-       
-            >
+            <TouchableOpacity
+            onPress={()=>Navigation.navigate(MainNavigationString.LIVECHAT)}
+             style={styles.Card}>
               <Image source={imagePath.LiveChat} style={styles.postImage} />
               <Text style={styles.badge}>
                 <Text style={styles.badgeT}>20</Text>
@@ -77,10 +69,9 @@ function Dashboard() {
 
         <View style={styles.Main}>
           <View>
-            <TouchableOpacity style={styles.Card} 
-    
-            >
-            <Image source={imagePath.Auditions} style={styles.postImage} />
+            <TouchableOpacity style={styles.Card}
+            onPress={()=>Navigation.navigate(MainNavigationString.AUDITION)}>
+              <Image source={imagePath.Auditions} style={styles.postImage} />
               <Text style={styles.badge}>
                 <Text>2</Text>
               </Text>
@@ -103,7 +94,7 @@ function Dashboard() {
 
           <View>
             <TouchableOpacity style={styles.Card}
-
+            onPress={()=>Navigation.navigate(MainNavigationString.STARSHOWCASE)}
             >
               <Image source={imagePath.StarShowcase} style={styles.postImage} />
               <Text style={styles.badge}>
@@ -129,10 +120,8 @@ function Dashboard() {
 
         <View style={styles.Main}>
           <View>
-            <TouchableOpacity style={styles.Card} 
-           
-            >
-            <Image source={imagePath.Learning} style={styles.postImage} />
+            <TouchableOpacity onPress={()=>Navigation.navigate(MainNavigationString.LEARNING)} style={styles.Card}>
+              <Image source={imagePath.Learning} style={styles.postImage} />
               <Text style={styles.badge}>
                 <Text>2</Text>
               </Text>
@@ -155,7 +144,7 @@ function Dashboard() {
 
           <View>
             <TouchableOpacity style={styles.Card}
-          
+            onPress={()=>Navigation.navigate(MainNavigationString.LIVE)}
             >
               <Image source={imagePath.Live} style={styles.postImage} />
               <Text style={styles.badge}>
@@ -181,10 +170,11 @@ function Dashboard() {
 
         <View style={styles.Main}>
           <View>
-            <TouchableOpacity style={styles.Card} 
-        
+            <TouchableOpacity style={styles.Card}
+            
+            onPress={()=>Navigation.navigate(MainNavigationString.MEETUP)}
             >
-            <Image source={imagePath.Meetup} style={styles.postImage} />
+              <Image source={imagePath.Meetup} style={styles.postImage} />
               <Text style={styles.badge}>
                 <Text>2</Text>
               </Text>
@@ -207,7 +197,7 @@ function Dashboard() {
 
           <View>
             <TouchableOpacity style={styles.Card}
-        
+             onPress={()=>Navigation.navigate(MainNavigationString.GREETINGS)}
             >
               <Image source={imagePath.Greeting} style={styles.postImage} />
               <Text style={styles.badge}>
@@ -233,10 +223,10 @@ function Dashboard() {
 
         <View style={styles.Main}>
           <View>
-            <TouchableOpacity style={styles.Card} 
-       
+            <TouchableOpacity style={styles.Card}
+             onPress={()=>Navigation.navigate(MainNavigationString.QNA)}
             >
-            <Image source={imagePath.QnA} style={styles.postImage} />
+              <Image source={imagePath.QnA} style={styles.postImage} />
               <Text style={styles.badge}>
                 <Text>2</Text>
               </Text>
@@ -258,7 +248,9 @@ function Dashboard() {
           </View>
 
           <View>
-            <TouchableOpacity style={styles.Card} >
+            <TouchableOpacity style={styles.Card}
+             onPress={()=>Navigation.navigate(MainNavigationString.FANGROUP)}
+            >
               <Image source={imagePath.FanGroup} style={styles.postImage} />
               <Text style={styles.badge}>
                 <Text>2</Text>
@@ -280,12 +272,9 @@ function Dashboard() {
             </TouchableOpacity>
           </View>
         </View>
-        
       </View>
-
     </ScrollView>
   );
 }
-
 
 export default Dashboard;

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // In App.js in a new project
 
 import * as React from 'react';
@@ -14,7 +15,7 @@ import DashboardStack from './DashboardStack/DashboardStack';
 
 
 const Tab = createBottomTabNavigator();
-console.log('this is route page')
+
 function TabRoutes() {
     return (
 
