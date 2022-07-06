@@ -3,7 +3,7 @@ import React from 'react'
 import TabRoutes from './TabRoutes';
 
 
-const MainStack = ({ Stack }) => {
+const MainStack = (Stack) => {
     return (
         <>
             <Stack.Screen

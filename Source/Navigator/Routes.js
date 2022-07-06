@@ -11,6 +11,7 @@ import MainStack from './MainStack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import TabRoutes from './TabRoutes';
 import CustomDrawer from '../Components/CustomDrawer/CustomDrawer';
+import AuthStack from './AuthStack';
 
 const Drawer = createDrawerNavigator();
 
@@ -21,15 +22,15 @@ const Stack = createNativeStackNavigator();
 function Routes() {
     return (
         <NavigationContainer>
-            <Drawer.Navigator
+            {/* <Drawer.Navigator
 
                 drawerContent={(props) => <CustomDrawer {...props} />}
             >
                 <Drawer.Screen name={MainNavigationString.TAB} component={TabRoutes} />
-            </Drawer.Navigator>
-            {/* <Stack.Navigator>
-                {MainStack(Stack)}
-            </Stack.Navigator> */}
+            </Drawer.Navigator> */}
+            <Stack.Navigator screenOptions={{ headerShown: false }}>
+                {AuthStack(Stack)}
+            </Stack.Navigator>
         </NavigationContainer>
     );
 }
