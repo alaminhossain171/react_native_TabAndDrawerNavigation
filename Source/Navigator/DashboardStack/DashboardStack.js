@@ -15,6 +15,7 @@ import Meetup from './../../Screens/MeetUp/Meetup';
 import Qna from './../../Screens/QnA/Qna';
 import Fangroup from './../../Screens/Fangroup/Fangroup';
 import Greetings from './../../Screens/Greetings/Greetings';
+import LearningAll from '../../Screens/Learning/LearningAll';
 const StackDashbord = createNativeStackNavigator();
 
 const DashboardStack = () => {
@@ -56,6 +57,10 @@ const DashboardStack = () => {
       <StackDashbord.Screen
         name={MainNavigationString.LEARNING}
         component={Learning}
+      />
+      <StackDashbord.Screen
+        name={MainNavigationString.LEARNINGALL}
+        component={LearningAll}
       />
 
       {/* =======================Live =============================== */}
